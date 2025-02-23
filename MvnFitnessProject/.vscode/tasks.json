@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build", // task 이름: launch.json 의 preLaunchTask 와 일치해야 함
+            "type": "shell",  // task type: shell 명령어 실행
+            "command": "mvn",  // 실행할 명령어: mvn (Maven 명령어)
+            "args": [  // mvn 명령어 argument
+                "clean",
+                "package"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}" // 작업 디렉토리: 현재 workspace 폴더 (${workspaceFolder} 변수 사용)
+            },
+            "problemMatcher": [ // problem matcher: 빌드 에러/경고 표시 설정 (Maven 에러/경고 패턴 매칭)
+                "$maven"
+            ]
+        }
+    ]
+}

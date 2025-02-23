@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "tomcat",
+            "request": "launch",
+            "name": "Web Project",
+            "tomcatServerId": "Tomcat", // Servers Explorer 에 등록된 톰캣 서버 이름으로 수정 (예시: "Tomcat")
+            "port": 8081 // server.xml 의 <Connector port="..."> 값과 일치하도록 수정 (예시: 8080)
+            "protocol": "http",
+            "contextPath": "/",
+            "workspaceStorage": "C:\\Users\\k5096\\Documents\\GitHub\\mvnFitness\\MvnFitnessProject\\.vscode\\tomcat\\work",
+            "serverHome": "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0", // 실제 Tomcat 10.x 버전 설치 경로로 수정
+            "vmArgs": "  -Xms512m -Xmx1024m -XX:MaxPermSize=256m -Djava.awt.headless=true ",
+            "env": {
+                "CATALINA_BASE": "C:\\Users\\k5096\\Documents\\GitHub\\mvnFitness\\MvnFitnessProject\\.vscode\\base",
+                "CATALINA_HOME": "C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0", // serverHome 과 동일한 Tomcat 10.x 버전 설치 경로로 수정
+                "M2_HOME": "C:\\Program Files\\apache-maven-3.9.9"
+            },
+            "preLaunchTask": "Build"
+        }
+    ]
+}
